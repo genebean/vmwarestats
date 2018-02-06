@@ -21,4 +21,11 @@ sad.
 - Grafana + some dashboards
 - Telegraf for the local Vagrant vm
 
-The Grafana database is seeded with the contents of `grafana.db`. If you make changes that you want to save be sure to backup `/var/lib/grafana/grafana.db` before destroying your vm.
+The Grafana database is seeded with the contents of `grafana.db`. If you make
+changes that you want to save be sure to backup `/var/lib/grafana/grafana.db`
+before destroying your vm.
+
+## License
+
+My code here is released under the included BSD 3 clause license. The component
+software used by this project each has its own license.
