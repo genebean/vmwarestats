@@ -14,6 +14,8 @@ sad.
 ],
 ```
 
+## Software
+
 `vagrant up` sets up:
 
 - InfluxDB
