@@ -395,7 +395,7 @@
         "datasource": "${DS_VMWARE_PERFORMANCE}",
         "hide": 0,
         "includeAll": true,
-        "label": null,
+        "label": "vCenter / ESXi",
         "multi": true,
         "multiFormat": "regex values",
         "name": "host",
@@ -416,7 +416,7 @@
         "datasource": "${DS_VMWARE_PERFORMANCE}",
         "hide": 0,
         "includeAll": true,
-        "label": null,
+        "label": "Cluster",
         "multi": true,
         "name": "cluster",
         "options": [],
@@ -464,5 +464,5 @@
   },
   "timezone": "browser",
   "title": "CPU Ready",
-  "version": 10
+  "version": 11
 }
