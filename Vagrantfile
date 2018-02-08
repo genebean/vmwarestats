@@ -21,6 +21,7 @@ Vagrant.configure("2") do |config|
     rpm -i vsphere-influxdb-go*.rpm
     puppet resource file '/etc/vsphere-influxdb-go.json' ensure='link' target='/vagrant/vsphere-influxdb-go.json'
     puppet resource cron get-vmware-stats ensure=present command='/usr/local/bin/vsphere-influxdb-go' target='root' user='root'
+    /usr/local/bin/vsphere-influxdb-go
 
     # Grafana setup
     puppet resource yumrepo grafana ensure=present baseurl='https://packagecloud.io/grafana/stable/el/7/$basearch' descr='grafana' enabled=1 gpgcheck=1 gpgkey='https://packagecloud.io/gpg.key https://grafanarel.s3.amazonaws.com/RPM-GPG-KEY-grafana' repo_gpgcheck=1 sslcacert='/etc/pki/tls/certs/ca-bundle.crt' sslverify=1
