@@ -6,6 +6,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 3000, host: 3000
 
   config.vm.provision "shell", inline: <<-SCRIPT
+    set -e
     # InfluxDB setup
     puppet resource yumrepo influxdb ensure=present descr='InfluxDB Repository - RHEL \$releasever' baseurl='https://repos.influxdata.com/rhel/\$releasever/\$basearch/stable' enabled=1 gpgcheck=1 gpgkey='https://repos.influxdata.com/influxdb.key'
     yum -y install influxdb
